@@ -9,6 +9,6 @@ spec:
       app: nginx-test
   ingress:
   - from:
-    - podSelector
+    - podSelector:
         matchLabels:
           app: go-app
