@@ -1,0 +1,17 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-go-app-egress-to-cluster
+  namespace: default
+spec: 
+  podSelector:
+    matchLabels: 
+      app:go-app
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    ports:
+    - protocol: TCP
+      port: 80
+	  endPort: 30000
