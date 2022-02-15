@@ -13,10 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-      name: Install Dependencies
-    - name: Get New Changes 
+      displayName: Install Dependencies
+    - name: Validate YAML File(s)
       uses: stefanprodan/kube-tools@v1.2.0
-      name: Validate YAML File(s)
       with:
         kubectl: 1.16.2
         kustomize: 3.4.0
