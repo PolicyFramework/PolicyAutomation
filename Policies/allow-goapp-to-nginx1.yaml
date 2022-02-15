@@ -12,3 +12,4 @@ spec:
     - podSelector:
         matchLabels:
           app: go-app
+      
