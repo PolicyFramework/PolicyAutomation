@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-      displayName: Install Dependencies
+      name: Install Dependencies
     - name: Validate YAML File(s)
       uses: stefanprodan/kube-tools@v1.2.0
       with:
