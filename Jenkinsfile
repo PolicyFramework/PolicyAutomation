@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sshagent(credentials :['ssh-ubuntu']) {
                    sh """
+                   ssh -tt -o stricthostkeychecking=no admin123@192.168.49.1
                    ls ~/policies
                    """
                }
